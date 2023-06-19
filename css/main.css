@@ -1,10 +1,8 @@
 *{
-    height: 100%;
-    margin: 0;
-    padding: 0;
-
     font-family: 'Lato', sans-serif;
     font-family: 'Quattrocento', serif;
+}
 
-    background-color: #F8F9FA;
+header{
+    background-color: #ADB5BD;
 }
