@@ -1,6 +1,22 @@
-<?php include('inc/header.php')
+<?php 
+session_start();
+include('inc/header.php')
 ?>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
-</body>
-</html>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+
+            <?php
+            if(isset($_SESSION['status'])){
+                echo '<p class="alert alert-success mb-4">'.$_SESSION['status'].'</p>';
+                unset($_SESSION['status']);
+                }
+            ?>
+
+            <h2>Home Page</h2>
+        </div>
+    </div>
+</div>
+
+<?php include('inc/footer.php')?>
