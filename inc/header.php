@@ -14,7 +14,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="index.php">
         <img src="img/logo.png" alt="L'armoire de Melo" width="150" height="50">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
@@ -37,12 +37,14 @@
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="#">Roupas</a></li>
               <li><a class="dropdown-item" href="#">Sapatos</a></li>
-              <li><a class="dropdown-item" href="#">Fragancias</a></li>
+              <li><a class="dropdown-item" href="#">Fragâncias</a></li>
             </ul>
           </li>
         </ul>
         <form>
-          <input class="form-control" type="text" placeholder="Search">
+          <a href="login.php">
+            <img src="img/user-circle.svg" alt="utilizador">
+          </a>
         </form>
       </div>
     </div>
