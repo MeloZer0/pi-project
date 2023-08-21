@@ -1,5 +1,12 @@
 <?php
 session_start();
+
+if(isset($_SESSION['verified_user_id'])){
+  $_SESSION['status'] = "Já tem a sessão iniciada";
+  header('Location: index.php');
+  exit();
+}
+
 include('inc/header.php');
 ?>
 

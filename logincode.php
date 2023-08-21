@@ -1,11 +1,10 @@
 <?php
-
 session_start();
 include('config.php');
 
 if(isset($_POST['login_btn'])){
-    $email =$_POST['email'];
-    $clearTextPassword =$_POST['password'];
+    $email = $_POST['email'];
+    $clearTextPassword = $_POST['password'];
 
     try {
         $user = $auth->getUserByEmail("$email");
@@ -16,12 +15,12 @@ if(isset($_POST['login_btn'])){
 
             try {
                 $verifiedIdToken = $auth->verifyIdToken($idTokenString);
-                $signInResult->firebaseUserId();
+                $uid = $signInResult->firebaseUserId();
 
-                $_SESSION['verified_user_id'] = $signInResult;
+                $_SESSION['verified_user_id'] = $uid;
                 $_SESSION['idTokenString'] = $idTokenString;
                 
-                $_SESSION = "Entrando na sua conta...";
+                $_SESSION['status'] = "Entrou";
                 header('Location: index.php');
                 exit();
 
@@ -31,7 +30,7 @@ if(isset($_POST['login_btn'])){
 
         }
         catch(Exception $e){
-            $_SESSION = "Palavra-passe incorreta";
+            $_SESSION['status'] = "Palavra-passe incorreta";
             header('Location: login.php');
             exit();
         }
@@ -39,13 +38,13 @@ if(isset($_POST['login_btn'])){
 
     } catch (\Kreait\Firebase\Exception\Auth\UserNotFound $e) {
         // echo $e->getMessage();
-        $_SESSION = "Email incorreto";
+        $_SESSION['status'] = "Email incorreto";
         header('Location: login.php');
         exit();
     }
 }
 else{
-    $_SESSION = "Não autorizado";
+    $_SESSION['status'] = "Não autorizado";
     header('Location: login.php');
     exit();
 }

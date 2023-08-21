@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-pt">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/main.css">   
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Quattrocento:wght@400;700&display=swap" rel="stylesheet">  
-    <title>L'armoire de Melo</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Quattrocento:wght@400;700&display=swap" rel="stylesheet">
+  <title>L'armoire de Melo</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
       <a class="navbar-brand" href="index.php">
         <img src="img/logo.png" alt="L'armoire de Melo" width="150" height="50">
@@ -22,6 +23,7 @@
       </button>
 
       <div class="collapse navbar-collapse">
+
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link active" href="#">Início</a>
@@ -41,11 +43,18 @@
             </ul>
           </li>
         </ul>
-        <form>
-          <a href="login.php">
-            <img src="img/user-circle.svg" alt="utilizador">
-          </a>
-        </form>
+
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item me-3">
+            <a href="login.php">
+              <img src="img/user-circle.svg" alt="utilizador">
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="logout.php">Sair</a>
+          </li>
+        </ul>
+
       </div>
     </div>
   </nav>
