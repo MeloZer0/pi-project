@@ -1,6 +1,6 @@
 <?php 
-session_start();
-include('inc/header.php')
+include('authentication.php');
+include('inc/header.php');
 ?>
 
 <div class="container">
