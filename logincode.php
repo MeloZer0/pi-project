@@ -20,7 +20,7 @@ if(isset($_POST['login_btn'])){
                 $_SESSION['verified_user_id'] = $uid;
                 $_SESSION['idTokenString'] = $idTokenString;
                 
-                $_SESSION['status'] = "Entrou";
+                $_SESSION['status'] = "Bem-vindo";
                 header('Location: index.php');
                 exit();
 

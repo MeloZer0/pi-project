@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if(isset($_SESSION['verified_user_id'])){
+if (isset($_SESSION['verified_user_id'])) {
   $_SESSION['status'] = "Já tem a sessão iniciada";
   header('Location: index.php');
   exit();
@@ -19,11 +19,12 @@ include('inc/header.php');
             <form class="mb-3 mt-md-4" action="logincode.php" method="POST">
 
               <?php
-              if(isset($_SESSION['status'])){
+              if (isset($_SESSION['status'])) {
                 echo '<p class="alert alert-success mb-4">'.$_SESSION['status'].'</p>';
                 unset($_SESSION['status']);
-                }
+              }
               ?>
+
 
               <h2 class="fw-bold mb-4 text-uppercase ">L'armoire de Melo</h2>
 
